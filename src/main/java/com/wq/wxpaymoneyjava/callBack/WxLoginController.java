@@ -71,8 +71,8 @@ public class WxLoginController {
 
 
     @RequestMapping("/refundTest")
-    public Map<String, String> refundTest(String orderId, String refundId, String totalFee, String refundFee, String refundAccount) {//退款测试接口  与统一支付差不多
-
+    public Map<String, String> refundTest(String orderId, String refundId, String totalFee, String refundFee, String refundAccount) {
+        //退款测试接口  与统一支付差不多
         return refund(orderId,refundId,totalFee,refundFee,refundAccount);
 
     }
