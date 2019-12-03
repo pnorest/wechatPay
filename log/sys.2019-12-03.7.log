@@ -1,0 +1,9 @@
+2019-12-03 14:32:00,365 INFO (WxLoginController.java:103)- unifiedOrder request return body: 
+<xml><return_code><![CDATA[FAIL]]></return_code><return_msg><![CDATA[商户号该产品权限处罚中，请前往商户平台>产品中心检查后重试]]></return_msg></xml>
+2019-12-03 16:52:19,122 INFO (StartupInfoLogger.java:50)- Starting WxPaymoneyJavaApplication on DESKTOP-8CLK4E1 with PID 19620 (E:\project\wx-paymoney-java\target\classes started by pnorest in E:\project\wx-paymoney-java)
+2019-12-03 16:52:19,125 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-12-03 16:52:19,126 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+2019-12-03 16:52:20,536 INFO (StartupInfoLogger.java:59)- Started WxPaymoneyJavaApplication in 1.771 seconds (JVM running for 2.323)
+2019-12-03 17:00:34,211 INFO (StartupInfoLogger.java:50)- Starting WxPaymoneyJavaApplication on DESKTOP-8CLK4E1 with PID 11656 (E:\project\wx-paymoney-java\target\classes started by pnorest in E:\project\wx-paymoney-java)
+2019-12-03 17:00:34,214 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-12-03 17:00:34,215 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default

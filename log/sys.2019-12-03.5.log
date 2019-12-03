@@ -1,0 +1,6 @@
+2019-12-03 14:30:38,558 INFO (StartupInfoLogger.java:59)- Started WxPaymoneyJavaApplication in 2.074 seconds (JVM running for 2.702)
+2019-12-03 14:31:48,017 INFO (StartupInfoLogger.java:50)- Starting WxPaymoneyJavaApplication on DESKTOP-8CLK4E1 with PID 5196 (E:\project\wx-paymoney-java\target\classes started by pnorest in E:\project\wx-paymoney-java)
+2019-12-03 14:31:48,021 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-12-03 14:31:48,022 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+2019-12-03 14:31:49,440 INFO (StartupInfoLogger.java:59)- Started WxPaymoneyJavaApplication in 1.873 seconds (JVM running for 2.528)
+2019-12-03 14:31:59,256 INFO (WxLoginController.java:184)- 排序后的拼接参数：appid=wx5a3ae82e934304d5&attach=pnorest&body=统一下单测试&device_info=WEB&limit_pay=no_credit&mch_id=1483036802&nonce_str=JrqosFwzwgrNx7DINJDDungoMHj8EPBH&notify_url=http://xixie.natapp1.cc/hello&openid=oWTkN5Csb9jh3eCZkgqfSwyNeZ3E&out_trade_no=1515862115&sign_type=MD5&spbill_create_ip=169.254.27.198&time_expire=20191205143159&time_start=20191203143159&total_fee=1&trade_type=JSAPI&key=12345678901234567891yuanji200603

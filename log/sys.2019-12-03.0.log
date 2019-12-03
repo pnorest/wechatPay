@@ -1,0 +1,9 @@
+2019-12-03 10:39:25,666 INFO (StartupInfoLogger.java:50)- Starting WxPaymoneyJavaApplication on DESKTOP-8CLK4E1 with PID 4884 (E:\project\wx-paymoney-java\target\classes started by pnorest in E:\project\wx-paymoney-java)
+2019-12-03 10:39:25,671 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-12-03 10:39:25,672 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+2019-12-03 10:39:27,134 INFO (StartupInfoLogger.java:59)- Started WxPaymoneyJavaApplication in 1.911 seconds (JVM running for 2.642)
+2019-12-03 11:00:59,435 INFO (WxLoginController.java:31)- 后端接收到的code:null
+2019-12-03 11:01:00,177 INFO (WxLoginController.java:42)- clientIp:0:0:0:0:0:0:0:1
+2019-12-03 11:01:29,607 INFO (StartupInfoLogger.java:50)- Starting WxPaymoneyJavaApplication on DESKTOP-8CLK4E1 with PID 10208 (E:\project\wx-paymoney-java\target\classes started by pnorest in E:\project\wx-paymoney-java)
+2019-12-03 11:01:29,611 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-12-03 11:01:29,611 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
