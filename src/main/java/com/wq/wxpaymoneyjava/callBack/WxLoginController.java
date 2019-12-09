@@ -44,14 +44,23 @@ public class WxLoginController {
         log.info("clientIp:{}", clientIP);
         String randomNonceStr = RandomUtils.generateMixString(32);
         //拿到微信返回的prepay_id很重要！！
-        String prepayId = unifiedOrder(model.getOpenid(), clientIP, randomNonceStr);
+        //取到的open_id=oThR55Ptp9brhWX2QJA7gZi27YTQ
+        Map<String, String> result = unifiedOrder(model.getOpenid(), clientIP, randomNonceStr);
+        String prepayId = result.get("prepay_id");
+        String sign = result.get("sign");
+        log.info("prepayId"+prepayId);
         if (StringUtils.isNotBlank(prepayId)) {
             //拿到以后返回给前端
             PayInitParam payInitParam = new PayInitParam();
+
+            payInitParam.setAppId(Constant.APP_ID);
+//            payInitParam.setDetailId();  //这里支付接口没有DetailId这个参数
             payInitParam.setPrepayId(prepayId);
             payInitParam.setNonceStr(randomNonceStr);
             payInitParam.setOpenid(model.getOpenid());
+            payInitParam.setPaySign(sign);//加密签名
             payInitParam.setSession_key(model.getSession_key());
+            payInitParam.setTimeStamp(String.valueOf(System.currentTimeMillis()));
             return JSONResult.ok(payInitParam);
         } else {
             return JSONResult.errorMsg("拿不到prepayId请确认相关参数是否正常");
@@ -60,14 +69,14 @@ public class WxLoginController {
     }
 
 
-    @RequestMapping("/unifiedOrderTest")
-    public String unifiedOrderTest(String openId) {//统一支付测试接口
-        String clientIP="169.254.27.198";
-        String randomNonceStr="JrqosFwzwgrNx7DINJDDungoMHj8EPBH";
-        String prepayId = unifiedOrder(openId, clientIP, randomNonceStr);
-        return prepayId;
-
-    }
+//    @RequestMapping("/unifiedOrderTest")
+//    public String unifiedOrderTest(String openId) {//统一支付测试接口
+//        String clientIP="169.254.27.198";
+//        String randomNonceStr="JrqosFwzwgrNx7DINJDDungoMHj8EPBH";
+//        String prepayId = unifiedOrder(openId, clientIP, randomNonceStr);
+//        return prepayId;
+//
+//    }
 
 
     @RequestMapping("/refundTest")
@@ -84,14 +93,15 @@ public class WxLoginController {
      *
      * @param openId
      */
-    private String unifiedOrder(String openId, String clientIP, String randomNonceStr) {
-
+    private Map<String, String> unifiedOrder(String openId, String clientIP, String randomNonceStr) {
+//open_id=oThR55Ptp9brhWX2QJA7gZi27YTQ
         try {
+            log.info("openId"+openId);
             String url = Constant.URL_UNIFIED_ORDER;
             PayInfo payInfo = createPayInfo(openId, clientIP, randomNonceStr);
             String md5 = getSign(payInfo);
             payInfo.setSign(md5);
-            log.info("md5 value: {}", md5);
+            log.info("md5 value: {}", md5);//366C5EE8EA6D08B76F5E218993971B71
             String xml = CommonUtil.payInfoToXML(payInfo);
             xml = xml.replace("\n", "")
                     .replace("__", "_")
@@ -107,20 +117,22 @@ public class WxLoginController {
                 if (StringUtils.isNotBlank(return_msg) && !return_msg.equals("OK")) {
                     log.error("统一下单错误！");
                     // System.out.println("统一下单错误！");
-                    return "";
+                    return null;
                 }
-                String prepay_Id = result.get("prepay_id");
-                return prepay_Id;
+                //统一下单成功，把节后返回结果全部返回
+                return result;
+//                String prepay_Id = result.get("prepay_id");
+//                return prepay_Id;
 
             } else {
-                return "";
+                return null;
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return "";
+        return null;
     }
 
 

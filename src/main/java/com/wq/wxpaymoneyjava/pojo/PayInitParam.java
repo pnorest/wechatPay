@@ -5,6 +5,12 @@ public class PayInitParam {
     private String nonceStr;
     private String session_key;
     private String openid;
+    private String appId;//开发者appId
+    private String timeStamp;//时间戳
+    private String detailId;//详情id
+    private String paySign;//
+//https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=3
+
 
     public String getPrepayId() {
         return prepayId;
@@ -36,5 +42,37 @@ public class PayInitParam {
 
     public void setOpenid(String openid) {
         this.openid = openid;
+    }
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    public String getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    public String getDetailId() {
+        return detailId;
+    }
+
+    public void setDetailId(String detailId) {
+        this.detailId = detailId;
+    }
+
+    public String getPaySign() {
+        return paySign;
+    }
+
+    public void setPaySign(String paySign) {
+        this.paySign = paySign;
     }
 }

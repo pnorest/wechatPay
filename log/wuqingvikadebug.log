@@ -1,1 +1,5 @@
-2019-12-03 17:00:35,666 INFO (StartupInfoLogger.java:59)- Started WxPaymoneyJavaApplication in 1.8 seconds (JVM running for 2.436)
+2019-12-09 17:09:53,189 INFO (WxLoginController.java:49)- prepayIdwx09171009820791efe6f33d521071936900
+2019-12-09 17:38:50,482 INFO (StartupInfoLogger.java:50)- Starting WxPaymoneyJavaApplication on DESKTOP-8CLK4E1 with PID 11908 (E:\project\wechatPay\target\classes started by pnorest in E:\project\wechatPay)
+2019-12-09 17:38:50,486 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-12-09 17:38:50,486 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+2019-12-09 17:38:52,124 INFO (StartupInfoLogger.java:59)- Started WxPaymoneyJavaApplication in 2.113 seconds (JVM running for 2.865)
